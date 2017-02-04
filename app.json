@@ -10,7 +10,7 @@
     },
     "EMAIL_FROM": {
       "description": "A valid sending domain: https://support.sparkpost.com/customer/portal/articles/1933318",
-      "value": "test@sparkpostbox.com"
+      "value": "testing@sparkpostbox.com"
     },
     "EMAIL_TO": {
       "description": "A valid recipient",
