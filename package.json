@@ -1,0 +1,16 @@
+{
+  "name": "email-api",
+  "version": "1.0.0",
+  "description": "This is a simple API that provides a POST route that allows you to send emails with SparkPost API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joel Márquez",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "express": "^4.14.1",
+    "sparkpost": "^2.1.2"
+  }
+}

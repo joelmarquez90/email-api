@@ -1,0 +1,21 @@
+{
+  "name": "email-api",
+  "description": "This is a simple API that provides a POST route that allows you to send emails with SparkPost API",
+  "keywords": ["node", "express", "sparkpost", "email"],
+  "repository": "https://github.com/joelmarquez90/email-api",
+  "success_url": "/welcome",
+  "env": {
+    "SPARKPOST_API_KEY": {
+      "description": "A valid SparkPost API KEY: https://support.sparkpost.com/customer/portal/articles/1933377"
+    },
+    "EMAIL_FROM": {
+      "description": "A valid sending domain: https://support.sparkpost.com/customer/portal/articles/1933318",
+      "value": "test@sparkpostbox.com"
+    },
+    "EMAIL_TO": {
+      "description": "A valid recipient",
+      "value": "hello@bye.com"
+    }
+  },
+  "image": "heroku/nodejs"
+}
