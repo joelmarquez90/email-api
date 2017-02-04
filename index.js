@@ -4,11 +4,11 @@ var bodyParser = require('body-parser');
 var SparkPost = require('sparkpost');
 var pjson = require('./package.json');
 
-var client = new SparkPost(process.ENV.SPARKPOST_API_KEY);
+var client = new SparkPost(process.env.SPARKPOST_API_KEY);
 
 var allowCrossDomainConfig = function(req, res, next) {
 
-  res.header('Access-Control-Allow-Origin', origin);
+  res.header('Access-Control-Allow-Origin', req.get('origin'));
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
   res.header('Access-Control-Allow-Credentials', true);
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
@@ -47,8 +47,8 @@ app.post('/email', function (req, res) {
   var phone = req.body.phone || '';
   var message = req.body.message || '';
 
-  var from = process.ENV.EMAIL_FROM || '';
-  var to = process.ENV.EMAIL_TO || '';
+  var from = process.env.EMAIL_FROM || '';
+  var to = process.env.EMAIL_TO || '';
 
   client.transmissions.send({
     content: {
